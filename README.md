@@ -242,4 +242,4 @@ If you run into a problem, please follow the steps below and email support@luxon
     - To collect Data: 
          ```bash
          python3 depthai_demo.py -gt cv -enc left right color -encout path/to/output/ & python3 gopro_rec.py & python3 accelerometer.py
-          ```
+         ```
