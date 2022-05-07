@@ -35,6 +35,8 @@ imu.out.link(xlinkOut.input)
 # Pipeline is defined, now we can connect to the device
 with dai.Device(pipeline) as device:
 
+    time.sleep(.25)
+
     def timeDeltaToMilliS(delta) -> float:
         return delta.total_seconds()*1000
 
