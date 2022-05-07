@@ -226,3 +226,20 @@ If you run into a problem, please follow the steps below and email support@luxon
 5. How you are using the DepthAI python API (code snippet, for example)
 6. Console output
 # Oak-D-Heracleia
+- Video Collection:
+    - [https://docs.luxonis.com/projects/api/en/latest/install/#macos](https://docs.luxonis.com/projects/api/en/latest/install/#macos)
+    
+    - [https://docs.luxonis.com/en/latest/pages/faq/#how-do-i-record-or-encode-video-with-depthai](https://docs.luxonis.com/en/latest/pages/faq/#how-do-i-record-or-encode-video-with-depthai)
+    
+    - use the -enc (or –encode) to specify which cameras to encode (record), with optional -encout arguemnt to specify path to directory where to store encoded files.
+        - `python3 depthai_demo.py -gt cv -enc left color -encout [path/to/output]`
+        
+        ```bash
+        python3 depthai_demo.py -gt cv -enc left right color -encout /Users/shubhayu/Documents/depth_recording/
+        ```
+        
+    - To then play the video in mp4/mkv format use the following muxing command:
+        - `ffmpeg -frame rate 30 -i [path/to/output/video.h264]`
+       
+    - To collect Data: 
+        -  python3 depthai_demo.py -gt cv -enc left right color -encout path/to/output/ & python3 gopro_rec.py & python3 accelerometer.py
